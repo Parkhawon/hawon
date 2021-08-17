@@ -1,6 +1,7 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>YOUvice Seoul | 서울시 휴식 & 건강 가이드북</title>
     <link rel="stylesheet" href="../../style.css">
@@ -12,9 +13,20 @@
     <link rel="stylesheet" href="../asset/leftmenu.css" />
     <link rel="stylesheet" href="../asset/layout.css" />
     <link rel="stylesheet" href="../asset/command.css" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="http://mattstow.com/experiment/responsive-image-maps/jquery.rwdImageMaps.min.js"></script>
+    <script>
+        $(function () {
+
+            $('img[usemap]').rwdImageMaps();
+            $("#img").width("100%");
+
+            //$('area').on('click', function () {
+            //    alert($(this).attr('alt') + ' clicked');
+        });
+    </script>
 </head>
 <body>
-
     <!--Header-->
     <section class="district-header">
         <nav>
@@ -33,7 +45,6 @@
         </nav>
         <h1>지역별 코스</h1>
     </section>
-
     <!--Content-->
     <section class="content_district">
         <div id="content" class="clearfix">
@@ -82,9 +93,7 @@
             <div class="main2" id="gumain">
                 <h2>강북구</h2>
                 <!--map -->
-
                 <img class="gumap" src="../image/Gangbuk.png" style="max-width:100%; height:auto;" usemap="#image-map">
-
                 <map name="image-map">
                     <area target="" alt="북한산자락길" title="북한산자락길" href="./Mountain/bukhansanjarak.html" coords="162,613,219,581,239,597,258,610,259,640,247,665,233,665,246,630,240,612,214,603,169,625" shape="poly"
                            onmouseover="changePopupText('북한산자락길', '[근교산자락길 성북구.강북구 1.2km 40분 초급]', './Mountain/bukhansanjarak.html', 245, 700);" onmouseout="hidePopup();">
@@ -103,12 +112,9 @@
                             <p style="font-weight:bold;line-height:15px;">더보기</p>
                         </a>
                     </div>
-            </div>
-        
+            </div>     
         </div>
     </section>
-
-
     <hr width="100%" color="lightgray" size="1">
     <!--Footer-->
     <section class="footer">
@@ -124,7 +130,6 @@
         </div>
         <p><i class="far fa-copyright"></i> DSD-Korini. All rights reserved</p>
     </section>
-
     <!--JavaScript for Toggle Menu-->
     <script>
         var navLinks = document.getElementById("navLinks");
@@ -135,16 +140,7 @@
             navLinks.style.right = "-200px";
         }
     </script>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-    <script src="http://mattstow.com/experiment/responsive-image-maps/jquery.rwdImageMaps.min.js"></script>
     <script>
-        $(function () {
-            $('img[usemap]').rwdImageMaps();
-            $("#img").width("100%");
-
-            //$('area').on('click', function () {
-            //alert($(this).attr('alt') + ' clicked');
-        });
         //마우스오버 상자
 
         //절대 좌표
@@ -180,6 +176,5 @@
 
         }
     </script>
-
 </body>
 </html>

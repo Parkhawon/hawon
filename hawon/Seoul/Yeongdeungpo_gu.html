@@ -1,6 +1,7 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>YOUvice Seoul | 서울시 휴식 & 건강 가이드북</title>
     <link rel="stylesheet" href="../../style.css">
@@ -12,9 +13,20 @@
     <link rel="stylesheet" href="../asset/leftmenu.css" />
     <link rel="stylesheet" href="../asset/layout.css" />
     <link rel="stylesheet" href="../asset/command.css" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="http://mattstow.com/experiment/responsive-image-maps/jquery.rwdImageMaps.min.js"></script>
+    <script>
+        $(function () {
+
+            $('img[usemap]').rwdImageMaps();
+            $("#img").width("100%");
+
+            //$('area').on('click', function () {
+            //    alert($(this).attr('alt') + ' clicked');
+        });
+    </script>
 </head>
 <body>
-
     <!--Header-->
     <section class="district-header">
         <nav>
@@ -33,7 +45,6 @@
         </nav>
         <h1>지역별 코스</h1>
     </section>
-
     <!--Content-->
     <section class="content_district">
         <div id="content" class="clearfix">
@@ -93,7 +104,6 @@
                     <area target="" alt="영등포 동작구 한강길" title="영등포 동작구 한강길" href="./Hanriver/course_ydp.html" coords="53,38,34,59,164,153,218,149,232,184,287,263,312,269,313,261,244,181,250,157,198,132,176,137" shape="poly"
                           onmouseover="changePopupText('영등포 동작구 한강길', '[한강/지천길 영등포구 21.1Km 8시간 초급]', './Hanriver/course_ydp.html', 53, 36);" onmouseout="hidePopup();">
                 </map>
-
                 <div id="popup" style="background-color:white;position:absolute;opacity:0;border:1px solid black;border-bottom-width:5px;padding:5px 10px;"
                      onmouseover="showPopup();" onmouseout="hidePopup();">
                     <a id="popup_addr" href="#" style="text-decoration:none;color:black;" target="_self">
@@ -105,8 +115,6 @@
             </div>
         </div>
     </section>
-
-
     <hr width="100%" color="lightgray" size="1">
     <!--Footer-->
     <section class="footer">
@@ -114,7 +122,6 @@
         <p>
             (서울특별시 성북구 동선동2가 169-1 성신여자대학교미디어정보관 (제3교학팀) 02-920-7175 정보시스템공학과
         </p>
-
         <div class="icons">
             <a class="fab fa-github" href="https://github.com/DSD-Korini/YOUvice_Seoul"></a>
             <a class="fab fa-instagram" href="https://www.instagram.com/sswu_ise.ai/"></a>
@@ -122,7 +129,6 @@
         </div>
         <p><i class="far fa-copyright"></i> DSD-Korini. All rights reserved</p>
     </section>
-
     <!--JavaScript for Toggle Menu-->
     <script>
         var navLinks = document.getElementById("navLinks");
@@ -133,16 +139,7 @@
             navLinks.style.right = "-200px";
         }
     </script>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-    <script src="http://mattstow.com/experiment/responsive-image-maps/jquery.rwdImageMaps.min.js"></script>
     <script>
-        $(function () {
-            $('img[usemap]').rwdImageMaps();
-            $("#img").width("100%");
-
-            //$('area').on('click', function () {
-            //alert($(this).attr('alt') + ' clicked');
-        });
         //마우스오버 상자
 
         //절대 좌표
@@ -178,6 +175,5 @@
 
         }
     </script>
-
 </body>
 </html>

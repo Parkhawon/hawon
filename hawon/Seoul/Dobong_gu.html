@@ -1,6 +1,7 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>YOUvice Seoul | 서울시 휴식 & 건강 가이드북</title>
     <link rel="stylesheet" href="../../style.css">
@@ -12,9 +13,20 @@
     <link rel="stylesheet" href="../asset/leftmenu.css" />
     <link rel="stylesheet" href="../asset/layout.css" />
     <link rel="stylesheet" href="../asset/command.css" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="http://mattstow.com/experiment/responsive-image-maps/jquery.rwdImageMaps.min.js"></script>
+    <script>
+        $(function () {
+
+            $('img[usemap]').rwdImageMaps();
+            $("#img").width("100%");
+
+            //$('area').on('click', function () {
+            //    alert($(this).attr('alt') + ' clicked');
+        });
+    </script>
 </head>
 <body>
-
     <!--Header-->
     <section class="district-header">
         <nav>
@@ -33,7 +45,6 @@
         </nav>
         <h1>지역별 코스</h1>
     </section>
-
     <!--Content-->
     <section class="content_district">
         <div id="content" class="clearfix">
@@ -83,7 +94,6 @@
                 <!--map -->
                 <h2>도봉구</h2>
                 <img class="gumap" src="../image/Dobong.png" style="max-width:100%; height:auto;" usemap="#image-map">
-
                 <map name="image-map">
                     <area target="" alt="우이천길" title="우이천길" href="./Hanriver/course_ui.html" coords="105,588,137,575,187,687,228,703,245,721,302,756,307,800,353,833,385,897,362,900,342,848,302,822,273,758,226,734,206,701,174,694" shape="poly"
                           onmouseover="changePopupText('우이천길', '[한강/지천길 강북구,도봉구 7.94Km 2시간 초급]', './Hanriver/course_ui.html', 137 , 569);" onmouseout="hidePopup();">
@@ -97,11 +107,8 @@
                     </a>
                 </div>
             </div>
-
         </div>
     </section>
-
-
     <hr width="100%" color="lightgray" size="1">
     <!--Footer-->
     <section class="footer">
@@ -128,16 +135,7 @@
             navLinks.style.right = "-200px";
         }
     </script>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-    <script src="http://mattstow.com/experiment/responsive-image-maps/jquery.rwdImageMaps.min.js"></script>
     <script>
-        $(function () {
-            $('img[usemap]').rwdImageMaps();
-            $("#img").width("100%");
-
-            //$('area').on('click', function () {
-            //alert($(this).attr('alt') + ' clicked');
-        });
         //마우스오버 상자
 
         //절대 좌표

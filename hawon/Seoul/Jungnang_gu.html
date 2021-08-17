@@ -1,6 +1,7 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>YOUvice Seoul | 서울시 휴식 & 건강 가이드북</title>
     <link rel="stylesheet" href="../../style.css">
@@ -12,9 +13,20 @@
     <link rel="stylesheet" href="../asset/leftmenu.css" />
     <link rel="stylesheet" href="../asset/layout.css" />
     <link rel="stylesheet" href="../asset/command.css" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="http://mattstow.com/experiment/responsive-image-maps/jquery.rwdImageMaps.min.js"></script>
+    <script>
+        $(function () {
+
+            $('img[usemap]').rwdImageMaps();
+            $("#img").width("100%");
+
+            //$('area').on('click', function () {
+            //    alert($(this).attr('alt') + ' clicked');
+        });
+    </script>
 </head>
 <body>
-
     <!--Header-->
     <section class="district-header">
         <nav>
@@ -33,7 +45,6 @@
         </nav>
         <h1>지역별 코스</h1>
     </section>
-
     <!--Content-->
     <section class="content_district">
         <div id="content" class="clearfix">
@@ -86,8 +97,6 @@
             </div>
         </div>
     </section>
-
-
     <hr width="100%" color="lightgray" size="1">
     <!--Footer-->
     <section class="footer">
@@ -103,7 +112,6 @@
         </div>
         <p><i class="far fa-copyright"></i> DSD-Korini. All rights reserved</p>
     </section>
-
     <!--JavaScript for Toggle Menu-->
     <script>
         var navLinks = document.getElementById("navLinks");
@@ -114,8 +122,41 @@
             navLinks.style.right = "-200px";
         }
     </script>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-    <script src="http://mattstow.com/experiment/responsive-image-maps/jquery.rwdImageMaps.min.js"></script>
+    <script>
+        //마우스오버 상자
 
+        //절대 좌표
+        var test = $('#gumain');
+        var xx = test.offset().left;
+        var yy = test.offset().top;
+        /*#point는 각자 이미지맵 감싼 div 아이디나 이미지맵으로
+        var test = $('#point');
+        var xx;
+        var yy;*/
+        // 마우스오버 상자 내용, 링크, 위치 변경
+        function changePopupText(title, description, addr, x, y) {
+            document.getElementById('popup_title').innerHTML = title;
+            document.getElementById('popup_description').innerHTML = description;
+            document.getElementById('popup_addr').href = addr;
+
+            /*  test.mouseover(function (event) {
+                  xx = event.pageX;
+                  yy = event.pageY;
+            })*/
+            document.getElementById('popup').style.left = xx + x + "px";
+            document.getElementById('popup').style.top = yy + y + "px";
+            document.getElementById('popup').style.opacity = 1;
+
+        }
+        // 마우스오버 상자 숨기기
+        function hidePopup() {
+            document.getElementById('popup').style.opacity = 0;
+        }
+        // 마우스오버 상자 보이기
+        function showPopup() {
+            document.getElementById('popup').style.opacity = 1;
+
+        }
+    </script>
 </body>
 </html>

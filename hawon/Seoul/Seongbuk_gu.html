@@ -1,6 +1,7 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>YOUvice Seoul | 서울시 휴식 & 건강 가이드북</title>
     <link rel="stylesheet" href="../../style.css">
@@ -12,9 +13,20 @@
     <link rel="stylesheet" href="../asset/leftmenu.css" />
     <link rel="stylesheet" href="../asset/layout.css" />
     <link rel="stylesheet" href="../asset/command.css" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="http://mattstow.com/experiment/responsive-image-maps/jquery.rwdImageMaps.min.js"></script>
+    <script>
+        $(function () {
+
+            $('img[usemap]').rwdImageMaps();
+            $("#img").width("100%");
+
+            //$('area').on('click', function () {
+            //    alert($(this).attr('alt') + ' clicked');
+        });
+    </script>
 </head>
 <body>
-
     <!--Header-->
     <section class="district-header">
         <nav>
@@ -33,7 +45,6 @@
         </nav>
         <h1>지역별 코스</h1>
     </section>
-
     <!--Content-->
     <section class="content_district">
         <div id="content" class="clearfix">
@@ -83,11 +94,9 @@
                 <h2>성북구</h2>
                 <!--map -->
                 <img class="gumap" src="../image/Seongbuk.png" style="max-width:100%; height:auto;" usemap="#image-map">
-
                 <map name="image-map">
                     <area target="" alt="성북동고택북촌산책길" title="성북동고택북촌산책길" href="./EcoCulture/course_sungbukgotaeck.html" coords="191,152,186,110,217,113,218,150,256,168,264,196,298,207,281,228,246,205,238,182,191,167" shape="poly"
                           onmouseover="changePopupText('성북동고택북촌산책길', '[생태문화길 성북구 4.16km 2시간 중급]', './EcoCulture/course_sungbukgotaeck.html', 202 , 105);" onmouseout="hidePopup();">
-
                     <area target="" alt="북한산자락길" title="북한산자락길" href="./Mountain/bukhansanjarak.html" coords="149,399,185,391,206,378,212,409,212,418,158,411,139,415,151,422,173,428,224,444,233,417,225,376,191,356,139,386,133,396,112,378,91,379,101,405,131,408,147,412" shape="poly"
                           onmouseover="changePopupText('북한산 자락길', '[근교산자락길 성북구 1.2km 40분 초급]', './Mountain/bukhansanjarak.html', 198 , 359);" onmouseout="hidePopup();">
                 </map>
@@ -100,11 +109,8 @@
                     </a>
                 </div>
             </div>
-
         </div>
     </section>
-
-
     <hr width="100%" color="lightgray" size="1">
     <!--Footer-->
     <section class="footer">
@@ -131,16 +137,7 @@
             navLinks.style.right = "-200px";
         }
     </script>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-    <script src="http://mattstow.com/experiment/responsive-image-maps/jquery.rwdImageMaps.min.js"></script>
     <script>
-        $(function () {
-            $('img[usemap]').rwdImageMaps();
-            $("#img").width("100%");
-
-            //$('area').on('click', function () {
-            //alert($(this).attr('alt') + ' clicked');
-        });
         //마우스오버 상자
 
         //절대 좌표
@@ -176,6 +173,5 @@
 
         }
     </script>
-
 </body>
 </html>

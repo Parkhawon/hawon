@@ -1,6 +1,7 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>YOUvice Seoul | 서울시 휴식 & 건강 가이드북</title>
     <link rel="stylesheet" href="../../style.css">
@@ -12,9 +13,20 @@
     <link rel="stylesheet" href="../asset/leftmenu.css" />
     <link rel="stylesheet" href="../asset/layout.css" />
     <link rel="stylesheet" href="../asset/command.css" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="http://mattstow.com/experiment/responsive-image-maps/jquery.rwdImageMaps.min.js"></script>
+    <script>
+        $(function () {
+
+            $('img[usemap]').rwdImageMaps();
+            $("#img").width("100%");
+
+            //$('area').on('click', function () {
+            //    alert($(this).attr('alt') + ' clicked');
+        });
+    </script>
 </head>
 <body>
-
     <!--Header-->
     <section class="district-header">
         <nav>
@@ -33,7 +45,6 @@
         </nav>
         <h1>지역별 코스</h1>
     </section>
-
     <!--Content-->
     <section class="content_district">
         <div id="content" class="clearfix">
@@ -82,8 +93,7 @@
             <div class="main2" id="gumain">
                 <h2>서초구</h2>
                 <!--map -->
-                <img class="gumap" src="../image/Seocho.png" style="max-width:100%; height:auto;" usemap="#image-map">
-                
+                <img class="gumap" src="../image/Seocho.png" style="max-width:100%; height:auto;" usemap="#image-map">             
                 <map name="image-map">
                     <area target="" alt="반포천" title="반포천" href="./Hanriver/course_banpo.html" coords="162,185,86,212,43,188,21,198,71,249,174,208" shape="poly"
                     onmouseover="changePopupText('반포천', '[한강/지천길 서초구 2.57Km 1시간 초급]', './Hanriver/course_banpo.html', 37, 177);" onmouseout="hidePopup();">
@@ -92,21 +102,17 @@
                     <area target="" alt="우면산 나들길" title="우면산 나들길" href="./EcoCulture/Umeonsan.html" coords="225,389,248,381,234,378,207,386,182,398,170,416,184,429,211,419,234,411,243,383,228,395,225,401,219,404,204,415,185,416,194,398,218,389" shape="poly"
                           onmouseover="changePopupText('우면산 나들길', '[생태문화길 서초구 3.86km 2시간 중급]', './EcoCulture/Umeonsan.html', 244 , 367);" onmouseout="hidePopup();">
                 </map>
-
-                    <div id="popup" style="background-color:white;position:absolute;opacity:0;border:1px solid black;border-bottom-width:5px;padding:5px 10px;"
-                         onmouseover="showPopup();" onmouseout="hidePopup();">
+                <div id="popup" style="background-color:white;position:absolute;opacity:0;border:1px solid black;border-bottom-width:5px;padding:5px 10px;"
+                    onmouseover="showPopup();" onmouseout="hidePopup();">
                         <a id="popup_addr" href="#" style="text-decoration:none;color:black;" target="_self">
                             <p id="popup_title" style="font-size:20px;font-weight:bold;line-height:15px;"></p>
                             <p id="popup_description" style="line-height:15px;"></p>
                             <p style="font-weight:bold;line-height:15px;">더보기</p>
                         </a>
-                    </div>
+                </div>
             </div>
-
         </div>
     </section>
-
-
     <hr width="100%" color="lightgray" size="1">
     <!--Footer-->
     <section class="footer">
@@ -122,7 +128,6 @@
         </div>
         <p><i class="far fa-copyright"></i> DSD-Korini. All rights reserved</p>
     </section>
-
     <!--JavaScript for Toggle Menu-->
     <script>
         var navLinks = document.getElementById("navLinks");
@@ -133,16 +138,7 @@
             navLinks.style.right = "-200px";
         }
     </script>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-    <script src="http://mattstow.com/experiment/responsive-image-maps/jquery.rwdImageMaps.min.js"></script>
     <script>
-        $(function () {
-            $('img[usemap]').rwdImageMaps();
-            $("#img").width("100%");
-
-            //$('area').on('click', function () {
-            //alert($(this).attr('alt') + ' clicked');
-        });
         //마우스오버 상자
 
         //절대 좌표
@@ -178,6 +174,5 @@
 
         }
     </script>
-
 </body>
 </html>

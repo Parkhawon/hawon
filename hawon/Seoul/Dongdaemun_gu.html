@@ -1,6 +1,7 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>YOUvice Seoul | 서울시 휴식 & 건강 가이드북</title>
     <link rel="stylesheet" href="../../style.css">
@@ -12,9 +13,20 @@
     <link rel="stylesheet" href="../asset/leftmenu.css" />
     <link rel="stylesheet" href="../asset/layout.css" />
     <link rel="stylesheet" href="../asset/command.css" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="http://mattstow.com/experiment/responsive-image-maps/jquery.rwdImageMaps.min.js"></script>
+    <script>
+        $(function () {
+
+            $('img[usemap]').rwdImageMaps();
+            $("#img").width("100%");
+
+            //$('area').on('click', function () {
+            //    alert($(this).attr('alt') + ' clicked');
+        });
+    </script>
 </head>
 <body>
-
     <!--Header-->
     <section class="district-header">
         <nav>
@@ -33,7 +45,6 @@
         </nav>
         <h1>지역별 코스</h1>
     </section>
-
     <!--Content-->
     <section class="content_district">
         <div id="content" class="clearfix">
@@ -90,22 +101,17 @@
                     <area target="" alt="배봉산자락길" title="배봉산자락길" href="./Mountain/Baebongjarak.html" coords="595,351,564,328,518,429,542,427,570,350,582,370" shape="poly"
                           onmouseover="changePopupText('배봉산 자락길', '[근교산자락길 동대문구 0.73km 30분 초급]', './Mountain/Baebongjarak.html', 583 , 300);" onmouseout="hidePopup();">
                 </map>
-
-
-                    <div id="popup" style="background-color:white;position:absolute;opacity:0;border:1px solid black;border-bottom-width:5px;padding:5px 10px;"
+                <div id="popup" style="background-color:white;position:absolute;opacity:0;border:1px solid black;border-bottom-width:5px;padding:5px 10px;"
                          onmouseover="showPopup();" onmouseout="hidePopup();">
                         <a id="popup_addr" href="#" style="text-decoration:none;color:black;" target="_self">
                             <p id="popup_title" style="font-size:20px;font-weight:bold;line-height:15px;"></p>
                             <p id="popup_description" style="line-height:15px;"></p>
                             <p style="font-weight:bold;line-height:15px;">더보기</p>
                         </a>
-                    </div>
+                </div>
             </div>
-
         </div>
     </section>
-
-
     <hr width="100%" color="lightgray" size="1">
     <!--Footer-->
     <section class="footer">
@@ -132,16 +138,7 @@
             navLinks.style.right = "-200px";
         }
     </script>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-    <script src="http://mattstow.com/experiment/responsive-image-maps/jquery.rwdImageMaps.min.js"></script>
     <script>
-        $(function () {
-            $('img[usemap]').rwdImageMaps();
-            $("#img").width("100%");
-
-            //$('area').on('click', function () {
-            //alert($(this).attr('alt') + ' clicked');
-        });
         //마우스오버 상자
 
         //절대 좌표

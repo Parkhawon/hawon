@@ -1,6 +1,7 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>YOUvice Seoul | 서울시 휴식 & 건강 가이드북</title>
     <link rel="stylesheet" href="../../style.css">
@@ -12,6 +13,18 @@
     <link rel="stylesheet" href="../asset/leftmenu.css" />
     <link rel="stylesheet" href="../asset/layout.css" />
     <link rel="stylesheet" href="../asset/command.css" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="http://mattstow.com/experiment/responsive-image-maps/jquery.rwdImageMaps.min.js"></script>
+    <script>
+        $(function () {
+
+            $('img[usemap]').rwdImageMaps();
+            $("#img").width("100%");
+
+            //$('area').on('click', function () {
+            //    alert($(this).attr('alt') + ' clicked');
+        });
+    </script>
 </head>
 <body>
 
@@ -82,8 +95,7 @@
             <div class="main2" id="gumain">
                 <h2>강동구</h2>
                 <!--map -->
-                <img class="gumap" src="../image/Gangdong.png" style="max-width:100%; height:auto;" usemap="#image-map">
-                
+                <img class="gumap" src="../image/Gangdong.png" style="max-width:100%; height:auto;" usemap="#image-map">               
                 <map name="image-map">
                     <area target="" alt="송파강동한강길" title="송파강동한강길" href="./Hanriver/course_songpagang.html" coords="18,461,50,477,80,407,79,347,145,277,225,212,322,200,354,194,551,78,545,47,342,180,273,179,202,193,132,243,69,319" shape="poly"
                            onmouseover="changePopupText('송파강동한강길', '[한강/지천길 송파구 17.98Km 5시간40분 초급]', './Hanriver/course_songpagang.html', 42 , 458);" onmouseout="hidePopup();">
@@ -92,21 +104,17 @@
                     <area target="" alt="망월천길" title="망월천길" href="./Hanriver/course_mangwol.html" coords="544,135,466,145,465,162,547,148,569,180,561,211,577,236,551,254,551,273,597,253,581,214,581,172" shape="poly"
                            onmouseover="changePopupText('망월천길', '[한강/지천길 강동구 3.98Km 1시간 30분 초급]', './Hanriver/course_mangwol.html', 577 , 100);" onmouseout="hidePopup();">
                 </map>
-
-                    <div id="popup" style="background-color:white;position:absolute;opacity:0;border:1px solid black;border-bottom-width:5px;padding:5px 10px;"
-                         onmouseover="showPopup();" onmouseout="hidePopup();">
+                <div id="popup" style="background-color:white;position:absolute;opacity:0;border:1px solid black;border-bottom-width:5px;padding:5px 10px;"
+                     onmouseover="showPopup();" onmouseout="hidePopup();">
                         <a id="popup_addr" href="#" style="text-decoration:none;color:black;" target="_self">
                             <p id="popup_title" style="font-size:20px;font-weight:bold;line-height:15px;"></p>
                             <p id="popup_description" style="line-height:15px;"></p>
                             <p style="font-weight:bold;line-height:15px;">더보기</p>
                         </a>
-                    </div>
-</div>
-
+                </div>
+            </div>
         </div>
     </section>
-
-
     <hr width="100%" color="lightgray" size="1">
     <!--Footer-->
     <section class="footer">
@@ -114,7 +122,6 @@
         <p>
             (서울특별시 성북구 동선동2가 169-1 성신여자대학교미디어정보관 (제3교학팀) 02-920-7175 정보시스템공학과
         </p>
-
         <div class="icons">
             <a class="fab fa-github" href="https://github.com/DSD-Korini/YOUvice_Seoul"></a>
             <a class="fab fa-instagram" href="https://www.instagram.com/sswu_ise.ai/"></a>
@@ -122,7 +129,6 @@
         </div>
         <p><i class="far fa-copyright"></i> DSD-Korini. All rights reserved</p>
     </section>
-
     <!--JavaScript for Toggle Menu-->
     <script>
         var navLinks = document.getElementById("navLinks");
@@ -133,16 +139,7 @@
             navLinks.style.right = "-200px";
         }
     </script>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-    <script src="http://mattstow.com/experiment/responsive-image-maps/jquery.rwdImageMaps.min.js"></script>
     <script>
-        $(function () {
-            $('img[usemap]').rwdImageMaps();
-            $("#img").width("100%");
-
-            //$('area').on('click', function () {
-            //alert($(this).attr('alt') + ' clicked');
-        });
         //마우스오버 상자
 
         //절대 좌표
