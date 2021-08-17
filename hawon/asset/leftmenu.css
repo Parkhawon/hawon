@@ -1,0 +1,118 @@
+﻿@charset "UTF-8";
+*{
+    margin:0;
+    padding:0;
+    list-style: none;
+    text-decoration: none;
+}
+
+.sideMenu {
+
+    display: block;
+    overflow: hidden;
+}
+
+.leftnav {
+    overflow: hidden;
+    border: none;
+}
+
+.btn {
+    display: block;
+    padding: 20px 20px;
+    background-color: white;
+    font-size : 28px;
+    color: black;
+    position: relative;
+    font-weight: bolder;
+}
+.leftnav a:hover{
+    color: forestgreen;
+}
+
+.subMenu {
+    overflow: hidden;
+    transition: max-height 0.7s;
+    max-height: 0;
+}
+
+    .subMenu a {
+        display: block;
+        padding: 11px 20px;
+        color: #222;
+        font-size:16px;
+        //border-bottom: 1px solid #eaeaea;
+        position: relative;
+    }
+
+        .subMenu a:after {
+            content: '';
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .subMenu a:hover {
+            color:forestgreen;
+            transition: all 0.3s;
+            border-bottom: 1px solid #c8c8c8;
+        }
+
+        .subMenu a:last-child {
+            border: none;
+        }
+
+.leftnav:target .subMenu {
+    max-height: none;
+}
+
+@media(max-width : 480px) {
+    .sideMenu {
+        text-align: center;
+        width: 100vw;
+        display: block;
+        overflow: hidden;
+        text-align: center;
+    }
+
+    .leftnav {
+        float: left;
+        text-align: center;
+        display: inline-block;
+        margin: 0 auto;
+    }
+    ul li {
+        display: inline-block;
+    }
+
+    .aside > li{
+        position : relative;
+        float: left;
+        width: 150px;
+        height: 30px;
+        text-align : center;
+    }
+    .btn {
+        width: 50vw;
+        background-color: #2d2d2d;
+        padding: 10px 0;
+        color: white;
+        font-size: 26px;
+    }
+
+    .subMenu {
+        //display: inline-block;
+        position: absolute;
+        z-index: 1;
+        width: 100%;
+        background: #eee;
+        opacity: 1;
+    }
+
+    .subMenu > a {
+        display : inline-block;
+    }
+
+    .leftnav a:hover {
+        color: white;
+    }
+}

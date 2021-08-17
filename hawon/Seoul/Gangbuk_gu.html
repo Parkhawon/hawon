@@ -1,0 +1,185 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YOUvice Seoul | 서울시 휴식 & 건강 가이드북</title>
+    <link rel="stylesheet" href="../../style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/all.min.css">
+    <!--menu3 stylesheet leftmenu,layout-->
+    <link rel="stylesheet" href="../asset/leftmenu.css" />
+    <link rel="stylesheet" href="../asset/layout.css" />
+    <link rel="stylesheet" href="../asset/command.css" />
+</head>
+<body>
+
+    <!--Header-->
+    <section class="district-header">
+        <nav>
+            <a href="../../index.html"><img src="../../images/logo_white.png"></a>
+            <div class="nav-links" id="navLinks">
+                <i class="fas fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="../../index.html">HOME</a></li>
+                    <li><a href="../../page_about.html">ABOUT</a></li>
+                    <li><a href="../../page_theme.html">테마별 코스</a></li>
+                    <li><a href="../../page_district.html">지역별 코스</a></li>
+                    <li><a href="../../page_stats.html">통계자료</a></li>
+                </ul>
+            </div>
+            <i class="fas fa-bars" onclick="showMenu()"></i>
+        </nav>
+        <h1>지역별 코스</h1>
+    </section>
+
+    <!--Content-->
+    <section class="content_district">
+        <div id="content" class="clearfix">
+            <!--menu-->
+            <div class="aside" id="aside">
+                <!--아코디언 메뉴-->
+                <ul class="sideMenu">
+                    <li class="leftnav" id="south">
+                        <a href="#south" class="btn">강남</a>
+                        <ul class="subMenu">
+                            <li><a href="Gangseo_gu.html">강서구</a></li>
+                            <li><a href="Yangcheon_gu.html">양천구</a></li>
+                            <li><a href="Guro_gu.html">구로구</a></li>
+                            <li><a href="Geumcheon_gu.html">금천구</a></li>
+                            <li><a href="Yeongdeungpo_gu.html">영등포구</a></li>
+                            <li><a href="Dongjak_gu.html">동작구</a></li>
+                            <li><a href="Gwanak_gu.html">관악구</a></li>
+                            <li><a href="Seocho_gu.html">서초구</a></li>
+                            <li><a href="Gangnam_gu.html">강남구</a></li>
+                            <li><a href="Songpa_gu.html">송파구</a></li>
+                            <li><a href="Gangdong_gu.html">강동구</a></li>
+                        </ul>
+                    </li>
+                    <li class="leftnav" id="north">
+                        <a href="#north" class="btn">강북</a>
+                        <ul class="subMenu">
+                            <li><a href="Seongbuk_gu.html">성북구</a></li>
+                            <li><a href="Nowon_gu.html">노원구</a></li>
+                            <li><a href="Jungnang_gu.html">중랑구</a></li>
+                            <li><a href="Gwangjin_gu.html">광진구</a></li>
+                            <li><a href="Jongno_gu.html">종로구</a></li>
+                            <li><a href="Yongsan_gu.html">용산구</a></li>
+                            <li><a href="Dobong_gu.html">도봉구</a></li>
+                            <li><a href="Gangbuk_gu.html">강북구</a></li>
+                            <li><a href="Dongdaemun_gu.html">동대문구</a></li>
+                            <li><a href="Jung_gu.html">중구</a></li>
+                            <li><a href="Seongdong_gu.html">성동구</a></li>
+                            <li><a href="Seodaemun_gu.html">서대문구</a></li>
+                            <li><a href="Mapo_gu.html">마포구</a></li>
+                            <li><a href="Eunpyeong_gu.html">은평구</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <!--right content-->
+            <div class="main2" id="gumain">
+                <h2>강북구</h2>
+                <!--map -->
+
+                <img class="gumap" src="../image/Gangbuk.png" style="max-width:100%; height:auto;" usemap="#image-map">
+
+                <map name="image-map">
+                    <area target="" alt="북한산자락길" title="북한산자락길" href="./Mountain/bukhansanjarak.html" coords="162,613,219,581,239,597,258,610,259,640,247,665,233,665,246,630,240,612,214,603,169,625" shape="poly"
+                           onmouseover="changePopupText('북한산자락길', '[근교산자락길 성북구.강북구 1.2km 40분 초급]', './Mountain/bukhansanjarak.html', 245, 700);" onmouseout="hidePopup();">
+                    <area target="" alt="가오천길" title="가오천길" href="./Hanriver/course_gao.html" coords="221,512,231,478,303,482,302,505" shape="poly"
+                           onmouseover="changePopupText('가오천길', '[한강/지천길 강북구 0.21km 20분 초급]', './Hanriver/course_gao.html', 224, 509);" onmouseout="hidePopup();">
+                    <area target="" alt="우이천길" title="우이천길" href="./Hanriver/course_ui.html" coords="414,461,272,386,279,278,252,241,266,225,305,265,300,381,434,453,587,642,550,654" shape="poly"
+                           onmouseover="changePopupText('우이천길', '[한강/지천길 강북구 7.94km 2시간 초급]', './Hanriver/course_ui.html', 437, 454);" onmouseout="hidePopup();">
+                    <area target="" alt="우이령나들길" title="우이령나들길" href="./EcoCulture/Uiryeong.html" coords="113,106,126,82,183,125,198,113,208,122,207,149,301,234,291,249,116,97" shape="poly"
+                           onmouseover="changePopupText('우이령나들길', '[한강/지천길 강북구 7.95km 2시간 30분]', './EcoCulture/Uiryeong.html', 207, 120);" onmouseout="hidePopup();">
+                </map>
+                    <div id="popup" style="background-color:white;position:absolute;opacity:0;border:1px solid black;border-bottom-width:5px;padding:5px 10px;"
+                         onmouseover="showPopup();" onmouseout="hidePopup();">
+                        <a id="popup_addr" href="#" style="text-decoration:none;color:black;" target="_self">
+                            <p id="popup_title" style="font-size:20px;font-weight:bold;line-height:15px;"></p>
+                            <p id="popup_description" style="line-height:15px;"></p>
+                            <p style="font-weight:bold;line-height:15px;">더보기</p>
+                        </a>
+                    </div>
+            </div>
+        
+        </div>
+    </section>
+
+
+    <hr width="100%" color="lightgray" size="1">
+    <!--Footer-->
+    <section class="footer">
+        <h4>About Us</h4>
+        <p>
+            (서울특별시 성북구 동선동2가 169-1 성신여자대학교미디어정보관 (제3교학팀) 02-920-7175 정보시스템공학과
+        </p>
+
+        <div class="icons">
+            <a class="fab fa-github" href="https://github.com/DSD-Korini/YOUvice_Seoul"></a>
+            <a class="fab fa-instagram" href="https://www.instagram.com/sswu_ise.ai/"></a>
+            <a class="fas fa-university" href="https://www.sungshin.ac.kr/sites/infosys/index.do"></a>
+        </div>
+        <p><i class="far fa-copyright"></i> DSD-Korini. All rights reserved</p>
+    </section>
+
+    <!--JavaScript for Toggle Menu-->
+    <script>
+        var navLinks = document.getElementById("navLinks");
+        function showMenu() {
+            navLinks.style.right = "0";
+        }
+        function hideMenu() {
+            navLinks.style.right = "-200px";
+        }
+    </script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="http://mattstow.com/experiment/responsive-image-maps/jquery.rwdImageMaps.min.js"></script>
+    <script>
+        $(function () {
+            $('img[usemap]').rwdImageMaps();
+            $("#img").width("100%");
+
+            //$('area').on('click', function () {
+            //alert($(this).attr('alt') + ' clicked');
+        });
+        //마우스오버 상자
+
+        //절대 좌표
+        var test = $('#gumain');
+        var xx = test.offset().left;
+        var yy = test.offset().top;
+        /*#point는 각자 이미지맵 감싼 div 아이디나 이미지맵으로
+        var test = $('#point');
+        var xx;
+        var yy;*/
+        // 마우스오버 상자 내용, 링크, 위치 변경
+        function changePopupText(title, description, addr, x, y) {
+            document.getElementById('popup_title').innerHTML = title;
+            document.getElementById('popup_description').innerHTML = description;
+            document.getElementById('popup_addr').href = addr;
+
+            /*  test.mouseover(function (event) {
+                  xx = event.pageX;
+                  yy = event.pageY;
+            })*/
+            document.getElementById('popup').style.left = xx + x + "px";
+            document.getElementById('popup').style.top = yy + y + "px";
+            document.getElementById('popup').style.opacity = 1;
+
+        }
+        // 마우스오버 상자 숨기기
+        function hidePopup() {
+            document.getElementById('popup').style.opacity = 0;
+        }
+        // 마우스오버 상자 보이기
+        function showPopup() {
+            document.getElementById('popup').style.opacity = 1;
+
+        }
+    </script>
+
+</body>
+</html>
