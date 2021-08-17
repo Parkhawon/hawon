@@ -3,26 +3,32 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>YOUvice Seoul | 서울시 휴식 & 건강 가이드북</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/all.min.css">
+
+<!----->
+<meta charset="utf-8" />
+<link rel="stylesheet" href="./soeun/css/command.css" />
+<link rel="stylesheet" href="./soeun/css/layout.css" />
+<link rel="stylesheet" href="./soeun/css/leftmenu.css" />
 </head>
 <body>
 
 <!--Header-->
-<section class="sub-header">
+<section class="sub-header_stats">
     <nav>
-        <a href="index.html"><img src="images/logo.png"></a>
+        <a href="./index.html"><img src="soeun/img/logo_white.png"></a>
         <div class="nav-links" id="navLinks">
             <i class="fas fa-times" onclick="hideMenu()"></i>
             <ul>
-                <li><a href="index.html">HOME</a></li>
-                <li><a href="page_about.html">ABOUT</a></li>
-                <li><a href="page_theme.html">테마별 코스</a></li>
-                <li><a href="page_district.html">지역별 코스</a></li>
-                <li><a href="page_stats.html">통계자료</a></li>
+                <li><a href="./index.html">HOME</a></li>
+                <li><a href="./page_about.html">ABOUT</a></li>
+                <li><a href="./page_theme.html">테마별 코스</a></li>
+                <li><a href="./page_district.html">지역별 코스</a></li>
+                <li><a href="./page_stats.html">통계자료</a></li>
             </ul>
         </div>
         <i class="fas fa-bars" onclick="showMenu()"></i>
@@ -32,20 +38,45 @@
 
 <!--Content-->
 <section class="content_stats">
+<!--content-->
+<div id="content" class="clearfix">
 
+    <!--menu-->
+    <div class="aside2">
+        <!--아코디언 메뉴-->
+        <ul class="leftnav">  
+            
+            <a href="./page_stats.html" class="btn2">관광&문화</a>
+            <a href="soeun/page_stats_menu/transportation.html" class="btn2">교통접근성</a>
+            <a href="soeun/page_stats_menu/facility.html" class="btn2">편의시설</a>
+            
+        </ul>
+    </div>
+
+    <!--right content-->
+    <div class="main">       
+        <h2 class="region"><b>관광&문화</h2>
+
+        <!--Tableau Public Dashboard-->
+        <div class="map_click_seoul">
+            <div class='tableauPlaceholder' id='viz1629125911921' style='position: relative'><noscript><a href='#'><img alt='대시보드_전체 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;st&#47;stats_attraction_0816&#47;__5&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='stats_attraction_0816&#47;__5' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;st&#47;stats_attraction_0816&#47;__5&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1629125911921');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.width='1000px';vizElement.style.height='827px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='1000px';vizElement.style.height='827px';} else { vizElement.style.width='100%';vizElement.style.height='1127px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+        <div class="img">
+    </div>
+
+</div>
 </section>
 
 <!--Footer-->
 <section class="footer">
     <h4>About Us</h4>
-    <p>우리는 아님 이 페이지는 어쩌구 저쩌구.우리는 아님 이 페이지는 어쩌구 저쩌구.우리는 아님 이 페이지는 어쩌구 저쩌구.<br>
-        우리는 아님 이 페이지는 어쩌구 저쩌구.우리는 아님 이 페이지는 어쩌구 저쩌구.</p>
+    <p>(서울특별시 성북구 동선동2가 169-1 성신여자대학교미디어정보관 (제3교학팀) 02-920-7175 정보시스템공학과</p>
 
-    <div class="icons">
-        <i class="fab fa-github"></i>
-        <i class="fab fa-instagram"></i>
-        <i class="fas fa-university"></i>
-    </div>
+        <div class="icons">
+            <a class="fab fa-github" href="https://github.com/DSD-Korini/YOUvice_Seoul"></a>
+            <a class="fab fa-instagram" href="https://www.instagram.com/sswu_ise.ai/"></a>
+            <a class="fas fa-university" href="https://www.sungshin.ac.kr/sites/infosys/index.do"></a>
+        </div>
+    
     <p><i class="far fa-copyright"></i> DSD-Korini. All rights reserved</p>
 </section>
 
